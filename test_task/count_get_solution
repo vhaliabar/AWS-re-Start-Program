@@ -1,0 +1,13 @@
+import string
+given_string = "You can have data without information, but you cannot have information without data."
+new_str=''
+for ch in given_string:
+    if ch.lower() not in string.punctuation and ch.lower() not in [' ']:
+        new_str+=ch.lower()
+print(new_str)
+def letter_count(s):
+    d = {}
+    for i in s:
+        d[i] = d.get(i,0)+1
+    return d
+print(letter_count(new_str))
